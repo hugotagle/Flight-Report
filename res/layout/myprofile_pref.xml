@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="PilotCredentials">
+	<PreferenceCategory android:title="Settings">
+		<CheckBoxPreference android:key="NotifyMe"
+			android:summary="Receive confirmation of successful transmission"
+			android:title="Notify Me" android:defaultValue="true"></CheckBoxPreference>
+		<EditTextPreference android:key="MyEmail"
+			android:summary="Enter your PilotCredentials.com email address" android:title="Your Email"
+			android:dialogTitle="EMail" android:dependency="NotifyMe"></EditTextPreference>
+		<ListPreference android:key="MaxRptNum" android:title="Max Report Number"
+			android:entries="@array/TransReportsNumItems" android:entryValues="@array/TransReportsNumValues"
+			android:summary="Choose maximum number of submitted reports kept in device"
+			android:defaultValue="8">
+		</ListPreference>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="User Profile">
+		<CheckBoxPreference android:key="IdentifyMe"
+			android:summary="Attach user profile information when submitting a report"
+			android:title="Submit Profile" android:defaultValue="false"></CheckBoxPreference>
+		<EditTextPreference android:key="MyEmpID"
+			android:summary="Enter employee ID" android:title="Employee ID"
+			android:dialogTitle="Employee ID" android:dependency="IdentifyMe"></EditTextPreference>
+		<EditTextPreference android:key="MyName"
+			android:summary="Enter name" android:title="Name"
+			android:dialogTitle="Name" android:dependency="IdentifyMe"></EditTextPreference>
+		<ListPreference android:key="MyPosition" android:title="Position"
+			android:entries="@array/position_array" android:entryValues="@array/position_array"
+			android:summary="Choose position" android:dependency="IdentifyMe">
+		</ListPreference>
+		<EditTextPreference android:key="MyPhone"
+			android:summary="Enter phone number" android:title="Phone #"
+			android:dialogTitle="Phone #" android:dependency="IdentifyMe"></EditTextPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Development">
+		<CheckBoxPreference android:key="SendAllFiles"
+			android:summary="Transmit all supporting files with the xml transmission"
+			android:title="Send Audio File" android:defaultValue="false"></CheckBoxPreference>
+		<EditTextPreference android:key="localhost"
+			android:summary="Enter IP for localhost" android:title="localhost"
+			android:dialogTitle="localhost"></EditTextPreference>
+	</PreferenceCategory>
+</PreferenceScreen>

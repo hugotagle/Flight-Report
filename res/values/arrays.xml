@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="position_array">
+		<item>AMT</item>
+		<item>Captain</item>
+		<item>Check Airman</item>
+		<item>Dispatcher</item>
+		<item>First Officer</item>
+		<item>Fleet Safety</item>
+		<item>Flight Safety</item>
+		<item>GOC Duty Officer</item>
+		<item>Jumpseater</item>
+		<item>Ramp Employee</item>
+		<item>RFO</item>
+		<item>Safety Programs</item>
+		<item>Second Officer</item>
+		<item>Other</item>
+	</string-array>
+	<string-array name="TransReportsNumItems">
+		<item>Six</item>
+		<item>Eight</item>
+		<item>Ten</item>
+		<item>Twelve</item>
+	</string-array>
+	<string-array name="TransReportsNumValues">
+		<item>6</item>
+		<item>8</item>
+		<item>10</item>
+		<item>12</item>
+	</string-array>
+</resources>

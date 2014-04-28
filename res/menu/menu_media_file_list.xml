@@ -1,0 +1,4 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_camera_media_file_list" android:icon="@drawable/ic_menu_camera"
+		android:title="Camera" android:visible="false" />
+</menu>

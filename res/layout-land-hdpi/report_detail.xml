@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent">
+	<RelativeLayout android:id="@+id/RelativeLayout02"
+		android:layout_height="40dp" android:layout_width="fill_parent"
+		android:background="@drawable/header_background">
+		<ImageButton android:id="@+id/btnHome" android:visibility="visible"
+			android:layout_width="75dp" android:layout_height="30dp" android:src="@drawable/home"
+			android:background="@drawable/background" android:textColor="#ffffff"
+			android:textStyle="bold" android:layout_alignParentLeft="true"
+			android:layout_margin="7dp"></ImageButton>
+		<TextView android:layout_width="wrap_content" android:id="@+id/txtReportTitle"
+			android:textColor="#FFFFFF" android:padding="8dp" android:textStyle="bold"
+			android:textSize="16sp" android:layout_height="wrap_content"
+			android:text="" android:layout_centerInParent="true"></TextView>
+	</RelativeLayout>
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:fillViewport="true"
+		android:layout_below="@+id/RelativeLayout02" android:layout_above="@+id/RelativeLayout05">
+		<RelativeLayout android:id="@+id/RelativeLayout03"
+			android:background="@drawable/world" android:focusable="true"
+			android:focusableInTouchMode="true" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_above="@+id/RelativeLayout05">
+			<FrameLayout android:background="@drawable/current_status_frame_background"
+				android:id="@+id/statusFrame" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_marginTop="10dp"
+				android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+				android:layout_marginBottom="5dp">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:id="@+id/rlTable0" android:layout_height="wrap_content">
+					<TextView android:layout_width="wrap_content"
+						android:textColor="#ffffff" android:layout_height="wrap_content"
+						android:id="@+id/dummyStatus" android:text="" android:textSize="16sp"
+						android:padding="14dp" android:layout_alignParentLeft="true"
+						android:typeface="monospace" android:textStyle="bold" />
+					<ImageButton android:id="@+id/btnCamera"
+						android:layout_width="75dp" android:layout_height="35dp"
+						android:src="@drawable/camera" android:background="@drawable/background"
+						android:layout_margin="7dp" android:visibility="visible"
+						android:layout_toLeftOf="@+id/btnRecPlay"></ImageButton>
+					<ImageButton android:id="@+id/btnRecPlay"
+						android:layout_width="75dp" android:layout_height="35dp"
+						android:src="@drawable/mic" android:background="@drawable/background"
+						android:layout_toLeftOf="@+id/btnLocationBase"
+						android:layout_margin="7dp" android:textColor="#ffffff"
+						android:textStyle="bold" android:visibility="visible"></ImageButton>
+					<ImageButton android:id="@+id/btnLocationBase"
+						android:layout_width="75dp" android:layout_height="35dp"
+						android:src="@drawable/globe_on" android:background="@drawable/background"
+						android:layout_margin="7dp" android:visibility="visible"
+						android:layout_alignParentRight="true"></ImageButton>
+				</RelativeLayout>
+			</FrameLayout>
+			<FrameLayout android:background="@drawable/frame_background"
+				android:layout_below="@+id/statusFrame" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:layout_marginTop="5dp"
+				android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+				android:layout_marginBottom="5dp">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:id="@+id/rlTable" android:layout_height="wrap_content">
+					<RelativeLayout android:id="@+id/rlRow00"
+						android:layout_width="wrap_content" android:stretchColumns="1"
+						android:layout_height="wrap_content" android:padding="1dp">
+						<TextView android:layout_width="wrap_content"
+							android:textColor="#000000" android:layout_height="wrap_content"
+							android:id="@+id/status" android:text="CURRENT" android:textSize="16sp"
+							android:padding="6dp" android:layout_alignParentLeft="true"
+							android:typeface="monospace" android:textStyle="bold"
+							android:visibility="gone" />
+						<TextView android:id="@+id/txtPicCount" android:textSize="16sp"
+							android:text="Pics ( 0 )" android:textStyle="bold"
+							android:padding="6dp" android:textColor="#000000"
+							android:layout_height="wrap_content" android:layout_width="wrap_content"
+							android:layout_toLeftOf="@+id/txtMemoDuration" />
+						<TextView android:id="@+id/txtMemoDuration"
+							android:textSize="16sp" android:text="Rec ( 00:00 )"
+							android:textStyle="bold" android:padding="6dp" android:textColor="#000000"
+							android:layout_height="wrap_content" android:layout_width="wrap_content"
+							android:layout_alignParentRight="true" />
+					</RelativeLayout>
+
+					<RelativeLayout android:id="@+id/rlBanner"
+						android:layout_below="@+id/rlRow00" android:layout_width="wrap_content"
+						android:stretchColumns="1" android:layout_height="wrap_content"
+						android:padding="1dp" android:visibility="gone">
+						<TextView android:layout_width="fill_parent"
+							android:gravity="left" android:textColor="#800000"
+							android:layout_height="wrap_content" android:id="@+id/txtLastAttemptDate"
+							android:text="" android:textSize="14sp" android:padding="10dp"
+							android:layout_alignParentLeft="true" android:typeface="monospace"
+							android:textStyle="bold" />
+					</RelativeLayout>
+
+					<RelativeLayout android:id="@+id/rlRow02"
+						android:layout_below="@+id/rlBanner" android:layout_width="wrap_content"
+						android:stretchColumns="1" android:layout_height="wrap_content"
+						android:padding="1dp">
+						<CheckBox android:id="@+id/cbFlightType" android:text="FLIGHT"
+							android:layout_height="wrap_content" android:layout_width="wrap_content"
+							android:checked="true" android:textColor="#000000"
+							android:paddingRight="20dp" />
+						<CheckBox android:id="@+id/cbMaintType" android:text="MAINTENANCE"
+							android:layout_height="wrap_content" android:layout_width="wrap_content"
+							android:textColor="#000000" android:layout_toRightOf="@+id/cbFlightType" />
+					</RelativeLayout>
+					
+					<RelativeLayout android:id="@+id/rlRow03"
+						android:layout_below="@+id/rlRow02" android:layout_width="wrap_content"
+						android:stretchColumns="1" android:layout_height="wrap_content"
+						android:padding="5dp">
+						<TextView android:id="@+id/txtTitle" android:text="Title "
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:gravity="left" android:padding="6dp" android:textColor="#000000" />
+						<EditText android:id="@+id/etTitle" android:layout_width="fill_parent"
+							android:maxLines="1" android:background="@drawable/edittext_background"
+							android:hint="Title" android:layout_height="wrap_content"
+							android:inputType="textCapCharacters|text" android:text=""
+							android:textColor="#000000" android:textSize="20sp"
+							android:layout_toRightOf="@+id/txtTitle" android:padding="6dp"
+							android:typeface="monospace" />
+					</RelativeLayout>
+					<RelativeLayout android:id="@+id/rlRow04"
+						android:layout_width="wrap_content" android:layout_below="@+id/rlRow03"
+						android:stretchColumns="1" android:layout_height="wrap_content"
+						android:padding="5dp">
+						<TextView android:id="@+id/txtDate" android:text="Date "
+							style="@style/TextViewFont" android:padding="6dp"
+							android:gravity="right" />
+						<EditText android:id="@+id/etEventDt"
+							android:layout_width="110dp" android:maxLines="1"
+							android:focusableInTouchMode="false" android:background="@drawable/edittext_background"
+							android:hint="09/09/11" android:layout_height="wrap_content"
+							android:inputType="textCapCharacters|text" android:text=""
+							android:textColor="#000000" android:textSize="20sp"
+							android:layout_toRightOf="@+id/txtDate" android:padding="6dp"
+							android:typeface="monospace" />
+						<TextView android:id="@+id/txtAt" android:text="Time "
+							style="@style/TextViewFont" android:padding="6dp"
+							android:layout_toRightOf="@+id/etEventDt" />
+						<EditText android:id="@+id/etEventTime"
+							android:layout_width="110dp" android:maxLines="1"
+							android:focusableInTouchMode="false" android:background="@drawable/edittext_background"
+							android:hint="10:30 AM" android:layout_height="wrap_content"
+							android:inputType="textCapCharacters|text" android:text=""
+							android:textColor="#000000" android:textSize="20sp"
+							android:padding="6dp" android:typeface="monospace"
+							android:layout_toRightOf="@+id/txtAt" />
+					</RelativeLayout>
+					<RelativeLayout android:id="@+id/rlRow06"
+						android:layout_below="@+id/rlRow04" android:layout_width="wrap_content"
+						android:stretchColumns="1" android:layout_height="wrap_content"
+						android:padding="1dp">
+						<CheckBox android:id="@+id/cbBirdStrike" android:text="BIRD STRIKE"
+							android:textColor="#000000" android:layout_height="wrap_content"
+							android:layout_width="wrap_content" android:paddingRight="20dp" />
+						<CheckBox android:id="@+id/cbDangerGood" android:text="DG"
+							android:textColor="#000000" android:layout_height="wrap_content"
+							android:layout_width="wrap_content" android:layout_toRightOf="@+id/cbBirdStrike" />
+					</RelativeLayout>
+					<RelativeLayout android:id="@+id/rlRow10"
+						android:layout_below="@+id/rlRow06" android:layout_width="wrap_content"
+						android:stretchColumns="1" android:layout_height="wrap_content"
+						android:padding="10dp">
+						<TextView android:id="@+id/txtFlight" android:text="Flight # "
+							style="@style/TextViewFont" android:gravity="right"
+							android:padding="6dp" />
+						<EditText android:id="@+id/etFlightNum" android:hint="Flight #"
+							android:layout_width="130dp" android:maxLines="1"
+							android:background="@drawable/edittext_background"
+							android:layout_height="40dp" android:inputType="textCapCharacters|text"
+							android:text="" android:textColor="#000000" android:textSize="20sp"
+							android:padding="6dp" android:typeface="monospace"
+							android:layout_toRightOf="@+id/txtFlight" />
+						<TextView android:id="@+id/txtTail" android:text="   Tail # "
+							android:layout_toRightOf="@+id/etFlightNum" style="@style/TextViewFont"
+							android:gravity="right" android:padding="6dp" />
+						<EditText android:id="@+id/etTailNum" android:hint="Tail #"
+							android:layout_toRightOf="@+id/txtTail" android:layout_width="130dp"
+							android:maxLines="1" android:background="@drawable/edittext_background"
+							android:layout_height="wrap_content" android:inputType="textCapCharacters|text"
+							android:text="" android:textColor="#000000" android:textSize="20sp"
+							android:padding="6dp" android:typeface="monospace" />
+					</RelativeLayout>
+				</RelativeLayout>
+			</FrameLayout>
+		</RelativeLayout>
+	</ScrollView>
+	<RelativeLayout android:id="@+id/RelativeLayout05"
+		android:layout_height="40dp" android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true" android:background="@drawable/footer_background">
+		<ImageButton android:id="@+id/btnDeleteReport"
+			android:layout_width="65dp" android:layout_height="35dp" android:src="@drawable/trash"
+			android:background="@drawable/background" android:textColor="#000000"
+			android:layout_alignParentLeft="true" android:layout_margin="7dp"
+			android:textStyle="bold"></ImageButton>
+		<ImageButton android:id="@+id/btnSendReport"
+			android:layout_width="65dp" android:layout_height="40dp" android:src="@drawable/send_on"
+			android:background="@drawable/background" android:textColor="#000000"
+			android:layout_alignParentRight="true" android:layout_margin="7dp"
+			android:textStyle="bold"></ImageButton>
+	</RelativeLayout>
+</RelativeLayout>

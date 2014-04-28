@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_media_list" android:icon="@drawable/ic_menu_slideshow"
+		android:title="Photos" android:visible="false" />
+	<item android:id="@+id/menu_rec_play" android:icon="@drawable/ic_btn_speak_now"
+		android:title="Voice Record" android:visible="false" />
+	<item android:id="@+id/menu_send_report" android:icon="@drawable/ic_menu_upload"
+		android:title="Send Report" android:enabled="false" android:visible="false" />
+	<item android:id="@+id/menu_delete_report" android:icon="@drawable/ic_menu_delete"
+		android:title="Delete Report" android:visible="false" />
+</menu>
+

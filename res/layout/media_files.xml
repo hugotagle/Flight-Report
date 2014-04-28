@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout android:id="@+id/RelativeLayout02"
+		android:layout_height="50dp" android:layout_width="fill_parent"
+		android:background="@drawable/header_background">
+		<ImageButton android:id="@+id/btnHome" android:visibility="visible"
+			android:layout_width="75dp" android:layout_height="35dp" android:src="@drawable/home"
+			android:background="@drawable/background" android:textColor="#ffffff"
+			android:textStyle="bold" android:layout_alignParentLeft="true"
+			android:layout_margin="7dp"></ImageButton>
+		<TextView android:layout_width="wrap_content"
+			android:textColor="#FFFFFF" android:padding="12dp" android:textStyle="bold"
+			android:textSize="18sp" android:layout_height="wrap_content"
+			android:text="Photos" android:layout_centerInParent="true"></TextView>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout03"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:background="@drawable/world" android:layout_above="@+id/RelativeLayout04"
+		android:layout_below="@+id/RelativeLayout02">
+		<ListView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/media_list"
+			android:layout_alignParentRight="true"></ListView>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout04"
+		android:layout_height="50dp" android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true" android:background="@drawable/footer_background">
+		<ImageButton android:id="@+id/btnMediaFilesCamera"
+			android:layout_width="75dp" android:layout_height="35dp" android:src="@drawable/camera"
+			android:background="@drawable/background" android:layout_margin="7dp"
+			android:layout_centerInParent="true"></ImageButton>
+	</RelativeLayout>
+</RelativeLayout>
+

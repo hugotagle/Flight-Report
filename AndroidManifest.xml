@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.dataedge.android.pc" android:versionCode="1"
+	android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="5" android:maxSdkVersion="10" />
+	<supports-screens android:largeScreens="true"
+		android:normalScreens="true" android:smallScreens="true"
+		android:anyDensity="true" android:resizeable="true" />
+	<application android:icon="@drawable/pc" android:label="@string/app_name"
+		android:debuggable="true" android:theme="@android:style/Theme.Black.NoTitleBar">
+		<service android:name="QueuedTransmissionService"></service>
+		<receiver android:name="NetworkReceiver">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<uses-library android:name="com.google.android.maps" />
+		<activity android:name=".activity.MainMenuActivity"
+			android:label="@string/app_name" android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.FiledReportsActivity"
+			android:screenOrientation="portrait">
+		</activity>
+		<!-- <activity android:name=".activity.MyProfileActivity" android:screenOrientation="portrait"> 
+			</activity> -->
+		<!-- <activity android:name=".activity.ReportActivity" android:configChanges="orientation"> 
+			</activity> -->
+		<activity android:name=".activity.ReportActivity">
+		</activity>
+		<activity android:name=".activity.MediaListActivity"
+			android:screenOrientation="portrait">
+		</activity>
+		<activity android:name=".activity.AudioActivity"
+			android:theme="@android:style/Theme.Dialog">
+		</activity>
+		<activity android:name=".activity.LocationMapActivity">
+		</activity>
+		<activity android:name=".activity.SettingsActivity"
+			android:theme="@android:style/Theme.Black" android:screenOrientation="portrait">
+		</activity>
+		<activity android:name=".activity.PhotoViewerActivity"
+			android:screenOrientation="portrait">
+		</activity>
+		<activity android:name=".activity.CameraActivity"
+			android:screenOrientation="portrait">
+		</activity>
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.CAMERA" />
+
+</manifest>

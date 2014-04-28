@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content">
+	<RelativeLayout android:id="@+id/RelativeLayout02"
+		android:layout_height="50dp" android:layout_width="fill_parent"
+		android:background="@drawable/header_background">
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout03"
+		android:background="#cccccc" android:focusable="true"
+		android:focusableInTouchMode="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_above="@+id/RelativeLayout05"
+		android:layout_below="@+id/RelativeLayout02">
+
+		<ImageView android:id="@+id/test_image" android:src="@drawable/background"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout05"
+		android:layout_height="50dp" android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true" android:background="@drawable/footer_background">
+		<ImageButton android:id="@+id/btnDeletePicture"
+			android:layout_width="65dp" android:layout_height="35dp" android:src="@drawable/trash"
+			android:background="@drawable/background" android:textColor="#000000"
+			android:layout_alignParentLeft="true" android:layout_margin="7dp"
+			android:textStyle="bold"></ImageButton>
+		<TextView android:id="@+id/txtPicNum" android:layout_width="wrap_content"
+			android:textColor="#FFFFFF" android:padding="12dp" android:textStyle="bold"
+			android:textSize="14sp" android:layout_height="wrap_content"
+			android:text="Pic # of #" android:layout_centerInParent="true"></TextView>
+		<ImageButton android:id="@+id/btnPreviousPic"
+			android:enabled="true" android:layout_width="50dp"
+			android:layout_height="35dp" android:background="@drawable/background"
+			android:src="@drawable/left_arrow_on" android:textColor="#000000"
+			android:textStyle="bold" android:layout_toLeftOf="@+id/btnNextPic"
+			android:layout_margin="3dp" android:visibility="visible"></ImageButton>
+		<ImageButton android:id="@+id/btnNextPic" android:enabled="true"
+			android:layout_width="50dp" android:layout_height="35dp"
+			android:src="@drawable/right_arrow_on" android:background="@drawable/background"
+			android:textColor="#000000" android:textStyle="bold"
+			android:layout_alignParentRight="true" android:layout_margin="3dp"
+			android:visibility="visible"></ImageButton>
+	</RelativeLayout>
+</RelativeLayout>

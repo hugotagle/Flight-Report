@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout android:id="@+id/RelativeLayout02"
+		android:layout_height="40dp" android:layout_width="fill_parent"
+		android:background="#15317E">
+		<TextView android:layout_width="wrap_content"
+			android:textColor="#FFFFFF" android:padding="4dip" android:typeface="serif"
+			android:textStyle="bold" android:textSize="18sp"
+			android:layout_height="wrap_content" android:text="PilotCredentials"
+			android:layout_centerInParent="true"></TextView>
+		<Button android:id="@+id/btnReports" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Reports"
+			android:background="@drawable/background" android:textColor="#ffffff"
+			android:textStyle="bold" android:layout_alignParentLeft="true"
+			android:layout_margin="7dip"></Button>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout03"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:background="#FFFFFF" android:layout_above="@+id/RelativeLayout04"
+		android:layout_below="@+id/RelativeLayout02">
+		<TableLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:stretchColumns="1">
+			<TableRow>
+				<TextView android:text="Anonymous" style="@style/TextViewFont" />
+				<CheckBox android:id="@+id/anonymous" android:layout_width="fill_parent" />
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Employee ID" style="@style/TextViewFont" />
+				<EditText android:layout_width="fill_parent" android:id="@+id/employeeId"
+					android:layout_height="50dip" />
+			</TableRow>
+			<TableRow>
+				<TextView android:text="First Name" style="@style/TextViewFont" />
+				<EditText android:layout_width="fill_parent" android:id="@+id/firstName"
+					android:layout_height="50dip" />
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Last Name" style="@style/TextViewFont" />
+				<EditText android:layout_width="fill_parent" android:id="@+id/lastName"
+					android:layout_height="50dip" />
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Position" style="@style/TextViewFont" />
+				<Spinner android:id="@+id/spinnerPosition"
+					android:layout_width="fill_parent" android:layout_height="50dip"></Spinner>
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Email" style="@style/TextViewFont" />
+				<EditText android:layout_width="fill_parent" android:id="@+id/email"
+					android:layout_height="50dip" />
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Phone" style="@style/TextViewFont" />
+				<EditText android:layout_width="fill_parent" android:id="@+id/phone"
+					android:layout_height="50dip" />
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Reply From Safety" style="@style/TextViewFont" />
+				<CheckBox android:id="@+id/repliedTo" android:layout_width="fill_parent" />
+			</TableRow>
+		</TableLayout>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout04"
+		android:layout_height="40dp" android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true" android:background="#001960">
+		<Button android:id="@+id/btnSaveSettings" android:layout_width="60dip"
+			android:layout_height="wrap_content" android:text="Save"
+			android:padding="2dip" android:textStyle="bold" android:background="@drawable/background"
+			android:textColor="#ffffff" android:layout_alignParentRight="true"
+			android:layout_margin="7dip"></Button>
+	</RelativeLayout>
+
+</RelativeLayout>

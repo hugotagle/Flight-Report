@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_add_report" android:icon="@drawable/ic_menu_add"
+		android:title="Add Report" android:visible="false"/>
+	<item android:id="@+id/menu_settings" android:icon="@drawable/ic_menu_manage"
+		android:title="Preferences" android:visible="false"/>
+	<item android:id="@+id/menu_send_queued" android:icon="@drawable/ic_menu_upload"
+		android:title="Send Queued"  android:enabled="false" android:visible="false"/>
+</menu>

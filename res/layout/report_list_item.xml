@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#ffffff">
+	<RelativeLayout android:layout_height="fill_parent"
+		android:layout_width="fill_parent" android:background="@drawable/wallpaper_background">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/reportTitle"
+			android:text="HUGO TOTALLY RO..." android:textColor="#000000"
+			android:textSize="17sp" android:padding="0dip"
+			android:layout_marginTop="12dip" android:layout_marginLeft="12dip"
+			android:layout_marginRight="12dip" android:layout_alignParentLeft="true"
+			android:typeface="monospace" android:textStyle="bold" />
+		<TextView android:layout_height="wrap_content" android:id="@+id/dateOfEvent"
+			android:text="07/03/11 12:35 PM" android:textSize="14sp"
+			android:layout_width="wrap_content" android:textColor="#000033"
+			android:visibility="visible" android:paddingLeft="58dip"
+			android:paddingTop="10dip" android:gravity="right"
+			android:layout_alignParentLeft="true" android:layout_below="@+id/reportTitle" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/queuedStatusMssg"
+			android:text="No Internet Access" android:textColor="#800000"
+			android:textSize="13sp" android:paddingBottom="6dip" android:typeface="monospace" 
+			android:layout_marginTop="12dip" android:layout_marginLeft="12dip"
+			android:layout_marginRight="12dip" android:layout_below="@+id/dateOfEvent" />
+		<TextView android:layout_width="120dip" android:textColor="#0000A0"
+			android:paddingTop="4dip" android:layout_height="wrap_content"
+			android:id="@+id/status" android:text="CURRENT" android:textSize="13sp"
+			android:paddingLeft="10dip" android:layout_centerHorizontal="true"
+			android:textStyle="bold" android:layout_toRightOf="@+id/reportTitle" />
+		<TextView android:layout_width="120dip"
+			android:layout_height="wrap_content" android:id="@+id/reportType"
+			android:text="MAINTENANCE" android:textSize="13sp"
+			android:paddingLeft="10dip" android:textColor="#000000"
+			android:layout_centerHorizontal="true" android:layout_toRightOf="@+id/reportTitle"
+			android:layout_below="@+id/status" />
+		<!-- <TextView android:layout_width="130dip" android:layout_height="wrap_content" 
+			android:id="@+id/editDate" android:text="07/03/11 12:35 PM" android:textSize="13sp" 
+			android:paddingLeft="10dip" android:textColor="#000000" android:layout_centerHorizontal="true" 
+			android:layout_toRightOf="@+id/reportTitle" android:layout_below="@+id/status" 
+			android:visibility="gone" /> -->
+
+		<ImageView android:layout_width="wrap_content"
+			android:background="@android:color/transparent"
+			android:paddingBottom="1dip" android:layout_height="wrap_content"
+			android:id="@+id/tinyCamera" android:paddingLeft="10dip"
+			android:paddingTop="2dip" android:src="@drawable/tiny_camera"
+			android:layout_centerHorizontal="true" android:layout_toRightOf="@+id/reportTitle"
+			android:layout_below="@+id/reportType" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:paddingTop="2dip"
+			android:paddingBottom="1dip" android:id="@+id/picCount" android:text="( 0 )"
+			android:textSize="13dip" android:paddingLeft="6dip"
+			android:textStyle="bold" android:textColor="#000000"
+			android:layout_centerHorizontal="true" android:layout_toRightOf="@+id/tinyCamera"
+			android:layout_below="@+id/reportType" />
+
+		<ImageView android:layout_width="wrap_content"
+			android:background="@android:color/transparent"
+			android:paddingBottom="1dip" android:layout_height="wrap_content"
+			android:id="@+id/tinySpeaker" android:paddingLeft="15dip"
+			android:paddingTop="1dip" android:src="@drawable/tiny_speaker"
+			android:layout_centerHorizontal="true" android:layout_toRightOf="@+id/reportTitle"
+			android:layout_below="@+id/tinyCamera" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:paddingTop="2dip"
+			android:paddingBottom="5dip" android:id="@+id/recTime" android:text="( 00:00 )"
+			android:textSize="13dip" android:paddingLeft="36dip"
+			android:textStyle="bold" android:textColor="#000000"
+			android:layout_centerHorizontal="true" android:layout_toRightOf="@+id/reportTitle"
+			android:layout_below="@+id/picCount" />
+
+
+
+		<ImageView android:layout_width="130dip" android:background="@android:color/transparent"
+			android:layout_height="wrap_content" android:id="@+id/rightArrow"
+			android:layout_alignParentRight="true" android:src="@drawable/arrow_gimp"
+			android:paddingTop="40dip" android:paddingLeft="10dip"
+			android:paddingRight="4dip" android:layout_toRightOf="@+id/reportType" />
+	</RelativeLayout>
+</LinearLayout>
